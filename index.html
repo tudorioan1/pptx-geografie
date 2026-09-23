@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Prezentare PowerPoint - Carpații Meridionali</title>
+  <title>Prezentare Carpații Meridionali</title>
   <style>
     * {
       margin: 0;
@@ -25,16 +25,14 @@
 </head>
 <body>
 
-  <!-- Redă prezentarea direct prin motorul PowerPoint Online -->
   <iframe id="pptViewer" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
 
   <script>
-    // Obține automat URL-ul unde este găzduit fișierul presentation.pptx
-    const currentFolderUrl = window.location.href.substring(0, window.location.href.lastIndexOf('/') + 1);
-    const pptxUrl = currentFolderUrl + 'presentation.pptx';
+    // Linkul RAW catre fisierul tau .pptx din GitHub
+    const rawPptxUrl = 'https://raw.githubusercontent.com/tudorioan1/pptx-geografie/main/presentation.pptx';
 
-    // Construiește legătura către viewer-ul oficial Microsoft Office
-    const officeEmbedUrl = 'https://view.officeapps.live.com/op/embed.aspx?src=' + encodeURIComponent(pptxUrl);
+    // Generarea URL-ului pentru viewer-ul oficial Microsoft Office
+    const officeEmbedUrl = 'https://view.officeapps.live.com/op/embed.aspx?src=' + encodeURIComponent(rawPptxUrl);
 
     document.getElementById('pptViewer').src = officeEmbedUrl;
   </script>
